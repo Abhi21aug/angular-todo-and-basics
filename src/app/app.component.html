@@ -1,0 +1,28 @@
+<input type="text" [(ngModel)]="name"  />
+<p>{{name}}</p>
+
+<a routerLink="">Home</a><br>
+<a routerLink="about">About</a><br>
+<a routerLink="user">User</a>
+
+<router-outlet></router-outlet>
+<div>
+  <h1 class="text-danger">{{ title }}</h1>
+  <h1>Counter App</h1>
+
+  <button (click)="increment()">Increment</button>
+  <p class="headingCss">Counter: {{ counter }}</p>
+  <button (click)="decrement()">Decrement</button>
+  <h1>Todo List by Abhishek</h1>
+  <app-todo></app-todo>
+<div>
+  <h1>Api Call</h1>
+  <button (click)="getApiData()">Get Api Call</button>
+  <div *ngFor=" let data of apiData">
+   <div style="border:1px solid red; padding:8px;margin-bottom: 8px;">
+    <p> name - {{data.name}}; city - {{data.address.city}}</p>
+
+   </div>
+  </div>
+</div>
+</div>
